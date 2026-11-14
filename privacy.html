@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — Tidy Notes</title>
+<meta name="description" content="Tidy Notes가 다루는 데이터와 Google Drive 권한에 대한 안내">
+<link rel="icon" href="notes.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="./"><img src="notes.svg" alt="" width="28" height="28"><span>Tidy Notes</span></a>
+  <nav><a href="./">소개</a><a href="privacy.html" aria-current="page">개인정보처리방침</a></nav>
+</header>
+
+<main class="doc">
+  <h1>개인정보처리방침</h1>
+  <p class="meta">시행일 2026년 11월 14일</p>
+
+  <p class="lead">Tidy Notes는 Windows용 데스크탑 메모 앱입니다. 메모는 사용자의 PC와 사용자 본인의 Google Drive에만 저장됩니다. 개발자는 사용자의 메모나 계정 정보를 받거나 보관하는 서버를 운영하지 않습니다.</p>
+
+  <h2>1. 다루는 정보</h2>
+  <table>
+    <thead><tr><th>정보</th><th>어디에 있나</th><th>왜 필요한가</th></tr></thead>
+    <tbody>
+      <tr><td>메모 내용·이미지</td><td>사용자 PC, 사용자 Google Drive의 <code>TidyNotes</code> 폴더</td><td>메모 보관과 여러 PC 사이 동기화</td></tr>
+      <tr><td>Google 계정 이메일 주소</td><td>사용자 PC (Windows 자격 증명 관리자)</td><td>설정 화면에 연결된 계정을 보여 주기 위해</td></tr>
+      <tr><td>Google 로그인 토큰</td><td>사용자 PC (Windows 자격 증명 관리자)</td><td>매번 다시 로그인하지 않고 Drive와 동기화하기 위해</td></tr>
+      <tr><td>창 위치·크기 같은 앱 설정</td><td>사용자 PC</td><td>앱을 다시 켰을 때 그대로 보여 주기 위해</td></tr>
+    </tbody>
+  </table>
+  <p>Tidy Notes는 사용 통계, 광고 식별자, 오류 보고를 수집하지 않습니다. 앱의 진단 기록(로그)에는 메모 내용과 토큰을 남기지 않습니다.</p>
+
+  <h2>2. Google Drive 권한</h2>
+  <p>Google 계정을 연결하면 Tidy Notes는 <code>drive.file</code> 권한 하나만 요청합니다. 이 권한으로는 <strong>Tidy Notes가 직접 만든 파일만</strong> 보고 고칠 수 있습니다. 사용자가 Drive에 올려 둔 다른 파일과 폴더는 볼 수 없습니다.</p>
+  <p>Tidy Notes가 Drive에서 하는 일은 다음뿐입니다.</p>
+  <ul>
+    <li>내 드라이브에 <code>TidyNotes</code> 폴더를 만들고, 그 안에 메모 한 장당 파일 하나(<code>notes/</code>)와 메모 속 이미지(<code>assets/</code>)를 저장합니다.</li>
+    <li>다른 PC에서 바뀐 메모 파일을 내려받아 이 PC의 메모에 반영합니다.</li>
+    <li>연결된 계정의 이메일 주소를 확인합니다.</li>
+  </ul>
+
+  <h2>3. Google 사용자 데이터 사용 원칙</h2>
+  <p>Tidy Notes가 Google API로 받은 정보를 사용하고 다른 앱으로 옮기는 방식은 제한적 사용(Limited Use) 요건을 포함한 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>을 따릅니다.</p>
+  <ul>
+    <li>Google 사용자 데이터는 메모 저장·동기화라는 앱 기능에만 씁니다.</li>
+    <li>누구에게도 팔거나 넘기지 않으며, 광고에 쓰지 않습니다.</li>
+    <li>개발자를 포함해 어떤 사람도 사용자의 데이터를 읽지 않습니다.</li>
+    <li>AI·머신러닝 모델 학습에 쓰지 않습니다.</li>
+  </ul>
+
+  <h2>4. 전송과 보안</h2>
+  <p>로그인은 Google의 표준 방식(OAuth 2.0과 PKCE)으로, 사용자의 기본 브라우저에서 이루어집니다. 비밀번호는 Tidy Notes에 입력되지 않습니다. 앱과 Google 사이의 통신은 모두 HTTPS로 암호화됩니다. 로그인 토큰은 Windows 자격 증명 관리자에만 저장하며, 메모 데이터베이스나 설정 파일에는 저장하지 않습니다.</p>
+
+  <h2>5. 보관과 삭제</h2>
+  <ul>
+    <li><strong>연결 끊기:</strong> 설정 → Google 계정 → 연결 끊기를 누르면 Google 쪽 권한을 취소하고 PC에 저장된 토큰과 이메일을 지웁니다. 이 PC의 메모는 그대로 남습니다.</li>
+    <li><strong>Google에서 직접 취소:</strong> <a href="https://myaccount.google.com/permissions">Google 계정 → 서드파티 앱 및 서비스</a>에서 Tidy Notes의 접근 권한을 언제든 취소할 수 있습니다.</li>
+    <li><strong>Drive의 메모 지우기:</strong> 내 드라이브의 <code>TidyNotes</code> 폴더를 지우면 됩니다.</li>
+    <li><strong>PC의 메모 지우기:</strong> 앱을 제거한 뒤 <code>%APPDATA%\TidyNotes</code> 폴더를 지우면 됩니다.</li>
+  </ul>
+
+  <h2>6. 어린이</h2>
+  <p>Tidy Notes는 업무용 메모 앱이며 만 14세 미만 어린이를 대상으로 하지 않습니다.</p>
+
+  <h2>7. 바뀌는 경우</h2>
+  <p>이 방침이 바뀌면 이 페이지에 새 시행일과 함께 올립니다. 다루는 정보나 권한이 늘어나는 변경은 앱 안에서도 알립니다.</p>
+
+
+  <section class="en" lang="en">
+    <h2>Summary in English</h2>
+    <p>Tidy Notes is a Windows desktop sticky-notes app. Notes are stored only on the user's PC and in the user's own Google Drive. The developer runs no server that receives or stores user notes or account data.</p>
+    <p>When the user connects a Google account, the app requests only the <code>drive.file</code> scope, which allows access solely to files the app itself creates (a <code>TidyNotes</code> folder with one JSON file per note and note images). The app reads the account email address to show which account is connected. OAuth tokens and the email address are stored only in the Windows Credential Manager on the user's PC.</p>
+    <p>Tidy Notes' use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to store and sync the user's notes, is never sold, transferred, used for advertising, read by humans, or used to train AI/ML models.</p>
+    <p>Users can disconnect in Settings → Google account, revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, and delete the <code>TidyNotes</code> folder from their Drive at any time.</p>
+  </section>
+</main>
+
+<footer class="foot"><span>© 2026 Tidy Notes</span><a href="privacy.html">개인정보처리방침</a></footer>
+</body>
+</html>

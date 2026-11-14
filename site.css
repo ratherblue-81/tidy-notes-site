@@ -1,0 +1,324 @@
+/* Tidy Notes 소개·개인정보처리방침 (브랜드 가이드: Notes 연두 #7BA300, 배경 #F2F2F7, Pretendard) */
+:root {
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --ink: #1c1c1e;
+  --sub: #6e6e73;
+  --line: #e3e3e8;
+  --notes: #7ba300;
+  --notes-ink: #4a6500;
+  --notes-soft: #eef5dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Pretendard, "Malgun Gothic", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--notes-ink);
+  text-underline-offset: 3px;
+}
+
+code,
+kbd {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.88em;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--notes-soft);
+  color: var(--notes-ink);
+}
+
+kbd {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+/* 위 띠 */
+.bar {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.brand img {
+  display: block;
+}
+
+.bar nav {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.bar nav a {
+  color: var(--sub);
+  text-decoration: none;
+}
+
+.bar nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* 소개 */
+.hero {
+  padding: 72px 0 56px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--notes-ink);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.lead {
+  margin: 20px 0 0;
+  max-width: 560px;
+  font-size: 18px;
+  color: var(--sub);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.grid article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 24px 22px;
+}
+
+.grid h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.grid p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--sub);
+}
+
+.privacy {
+  margin-top: 16px;
+  padding: 28px 28px 24px;
+  border-radius: 12px;
+  background: var(--notes-soft);
+}
+
+.privacy h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.privacy ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.privacy li + li {
+  margin-top: 4px;
+}
+
+.privacy code {
+  background: var(--card);
+}
+
+.more {
+  font-weight: 600;
+}
+
+/* 개인정보처리방침 */
+.doc {
+  max-width: 760px;
+  padding-top: 40px;
+}
+
+.doc h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.doc .meta {
+  margin: 6px 0 28px;
+  font-size: 14px;
+  color: var(--sub);
+}
+
+.doc .lead {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.doc h2 {
+  margin: 40px 0 10px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.doc p,
+.doc ul {
+  margin: 0 0 12px;
+}
+
+.doc ul {
+  padding-left: 20px;
+}
+
+.doc li + li {
+  margin-top: 6px;
+}
+
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.doc th,
+.doc td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.doc th {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sub);
+  background: #fafafc;
+}
+
+.doc tr:last-child td {
+  border-bottom: 0;
+}
+
+.doc .en {
+  margin-top: 56px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--sub);
+  font-size: 15px;
+  word-break: normal;
+}
+
+.doc .en h2 {
+  color: var(--ink);
+}
+
+.foot {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--sub);
+  border-top: 1px solid var(--line);
+}
+
+.foot a {
+  color: var(--sub);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 0 36px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bar {
+    padding: 16px;
+  }
+  main,
+  .foot {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .doc table,
+  .doc thead,
+  .doc tbody,
+  .doc tr,
+  .doc th,
+  .doc td {
+    display: block;
+  }
+  .doc thead {
+    display: none;
+  }
+  .doc td {
+    border-bottom: 0;
+    padding: 4px 14px;
+  }
+  .doc td:first-child {
+    padding-top: 12px;
+    font-weight: 600;
+  }
+  .doc td:last-child {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+}
