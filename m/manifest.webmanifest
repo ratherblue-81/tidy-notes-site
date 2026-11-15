@@ -1,0 +1,25 @@
+{
+  "name": "Tidy Notes",
+  "short_name": "Tidy Notes",
+  "description": "회사 PC에서 쓴 Tidy Notes 노트를 휴대폰에서 봅니다.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "../notes.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
